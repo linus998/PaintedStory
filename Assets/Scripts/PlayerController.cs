@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float speed = 5.0f; // Set player's movement speed.
-    public float rotationSpeed = 120.0f; // Set player's rotation speed.
+    //public float rotationSpeed = 120.0f; // Set player's rotation speed.
     public float jumpForce = 5.0f;
 
     private Rigidbody rb; // Reference to player's Rigidbody.
@@ -53,8 +53,8 @@ public class PlayerController : MonoBehaviour
         rb.MovePosition(rb.position + movement);
 
         // Rotate player based on horizontal input.
-        float turn = Input.GetAxis("Horizontal") * rotationSpeed * Time.fixedDeltaTime;
-        Quaternion turnRotation = Quaternion.Euler(0f, turn, 0f);
-        rb.MoveRotation(rb.rotation * turnRotation);
+        float moveHorizontal = Input.GetAxis("Horizontal") * speed * Time.fixedDeltaTime;
+        Vector3 slide = Quaternion.Euler(0f, moveHorizontal, 0f);
+        rb.MoveRotation(rb.rotation * slide);
     }
 }
