@@ -67,5 +67,5 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "PaintedStory.slnx"
+    "dotnet.defaultSolution": "Painted_Story.slnx"
 }
