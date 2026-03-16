@@ -6,7 +6,7 @@ using UnityEngine;
 // ============================================================
 // pubic class for paint brush item in game
 // ============================================================
-public class PaintBrush : PaintMechanics
+public class PaintBrush : MonoBehaviour
 {   
     // -------------------------------------
     // ------------- VARIABLES -------------
@@ -30,10 +30,10 @@ public class PaintBrush : PaintMechanics
     // run every tick and check for shot
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && Time.time >= nextFireTime)      // check fire button and timestamp
+        if (Input.GetButtonDown("Fire1") && Time.time >= TimeOfNextFire)      // check fire button and timestamp
         {
             Fire();                                                         // call fire function
-            nextFireTime = Time.time + fireRate;                            // set the next timestamp to fire at
+            TimeOfNextFire = Time.time + fireRate;                            // set the next timestamp to fire at
         }  
     }
 
