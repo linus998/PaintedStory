@@ -52,9 +52,9 @@ public class PlayerController : MonoBehaviour
         Vector3 movement = transform.forward * moveVertical * speed * Time.fixedDeltaTime;
         rb.MovePosition(rb.position + movement);
 
-        // Rotate player based on horizontal input.
+        // move player based on horizontal input.
         float moveHorizontal = Input.GetAxis("Horizontal");
-        Vector3 slide = transform.forward * moveHorizontal * speed * Time.fixedDeltaTime;
+        Vector3 slide = transform.right * moveHorizontal * speed * Time.fixedDeltaTime;
         rb.MovePosition(rb.position + slide);
     }
 }
