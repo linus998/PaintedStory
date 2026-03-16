@@ -6,7 +6,7 @@ using UnityEngine;
 // ============================================================
 // pubic class for paint brush item in game
 // ============================================================
-public class PaintBrush : PaintMechanics
+public class PaintBrush : MonoBehaviour
 {   
     // -------------------------------------
     // ------------- VARIABLES -------------
@@ -25,15 +25,16 @@ public class PaintBrush : PaintMechanics
     // start function (init on new player)
     void Start()
     {
+        Debug.Log("Started gun");
     }
 
     // run every tick and check for shot
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && Time.time >= nextFireTime)      // check fire button and timestamp
+        if (Input.GetButtonDown("Attack") && Time.time >= TimeOfNextFire)      // check fire button and timestamp
         {
             Fire();                                                         // call fire function
-            nextFireTime = Time.time + fireRate;                            // set the next timestamp to fire at
+            TimeOfNextFire = Time.time + fireRate;                            // set the next timestamp to fire at
         }  
     }
 
@@ -41,7 +42,8 @@ public class PaintBrush : PaintMechanics
     void Fire()
     {
         if (bulletPrefab != null && firePoint != null)                          // check for bullet prefab
-        {
+        {   
+            Debug.Log("Fired bullet at");
             Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);  // create a bullet at the firePoint 
         }
         else                                                                    // if bullet or prefab is missing
