@@ -457,6 +457,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3248320573249343968, guid: c2a40e2e303401f45af903cf69a9451f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1471119654}
     - targetCorrespondingSourceObject: {fileID: 7696805939888968885, guid: c2a40e2e303401f45af903cf69a9451f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1398184439}
@@ -464,6 +467,11 @@ PrefabInstance:
 --- !u!4 &1190920664 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2739704189534343448, guid: c2a40e2e303401f45af903cf69a9451f, type: 3}
+  m_PrefabInstance: {fileID: 871891368}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1198561766 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4753541375174330272, guid: c2a40e2e303401f45af903cf69a9451f, type: 3}
   m_PrefabInstance: {fileID: 871891368}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1398184434 stripped
@@ -485,6 +493,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MouseLook
   mouseSensitivity: 500
   playerBody: {fileID: 1190920664}
+--- !u!1 &1471119648 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3248320573249343968, guid: c2a40e2e303401f45af903cf69a9451f, type: 3}
+  m_PrefabInstance: {fileID: 871891368}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1471119654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471119648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f9f27bf5cc48d6468c473bcd1c2052e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PaintBrush
+  fireRate: 0.5
+  bulletPrefab: {fileID: 7548250280078241306, guid: c531b40f72d563c4b8010e0dcfea7536, type: 3}
+  firePoint: {fileID: 1198561766}
 --- !u!1 &2055460463
 GameObject:
   m_ObjectHideFlags: 0

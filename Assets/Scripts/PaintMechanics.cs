@@ -31,7 +31,7 @@ public class PaintBrush : MonoBehaviour
     // run every tick and check for shot
     void Update()
     {
-        if (Input.GetButtonDown("Attack") && Time.time >= TimeOfNextFire)      // check fire button and timestamp
+        if (Input.GetButtonDown("Fire1") && Time.time >= TimeOfNextFire)      // check fire button and timestamp
         {
             Fire();                                                         // call fire function
             TimeOfNextFire = Time.time + fireRate;                            // set the next timestamp to fire at
