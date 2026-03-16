@@ -22,3 +22,5 @@ Assets/AssetStoreTools*
 *.mdb
 *.opendb
 *.VC.db
+
+.vscode/
