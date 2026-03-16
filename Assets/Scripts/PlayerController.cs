@@ -53,8 +53,8 @@ public class PlayerController : MonoBehaviour
         rb.MovePosition(rb.position + movement);
 
         // Rotate player based on horizontal input.
-        float moveHorizontal = Input.GetAxis("Horizontal") * speed * Time.fixedDeltaTime;
-        Vector3 slide = Quaternion.Euler(0f, moveHorizontal, 0f);
-        rb.MoveRotation(rb.rotation * slide);
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        Vector3 slide = transform.forward * moveHorizontal * speed * Time.fixedDeltaTime;
+        rb.MovePosition(rb.rotation * slide);
     }
 }
